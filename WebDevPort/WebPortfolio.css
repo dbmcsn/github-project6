@@ -1,0 +1,496 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body,
+html {
+	background: url('stars.jpg');
+	background-repeat: repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: contain;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	
+}
+
+.nav-tabs {
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	text-align: center;
+	z-index: 1;
+	display: inline-block;	
+}
+
+a {
+	color: gray;
+	text-decoration: none;
+	transition: color .01s ease-in-out, box-shadow 0.6s ease-in-out;
+}
+
+a:hover {
+	font-weight: 900;
+	box-shadow: inset 100px 0 0 0 #A690A4;
+	color: white;
+	cursor: zoom-in;
+}
+
+.hometext {
+	text-align: center;
+	padding-top: 140px;
+	margin-bottom: 100px; 
+	transition: 1s;
+}
+
+.hometext .home {
+	font-size: 100px;
+	color: white;
+	opacity: 30%;
+}
+
+.home:hover {
+	opacity: 50%;
+	animation-name: hello;
+	animation-duration: 6s;
+}
+
+@keyframes hello {
+	from {color: white;}
+	to {color: yellow;}
+}
+
+.hometext .home2 {
+	font-size: 50px;
+	color: #5f515C;
+	font-family: Palatino Linotype, Book Antiqua, Palatino, Serif;
+	opacity: 30%;
+	padding-top: 70px;
+}
+
+.home2:hover {
+	opacity: 50%;
+	animation-name: helllo;
+	animation-duration: 3s;
+}
+
+@keyframes helllo {
+	from {color: #413F3F;}
+	to {color: whitesmoke;}
+}
+
+.projects {
+	color: #e3e3e3;
+	border-radius: 10px;
+	margin: 50px auto;
+	flex-flow: row wrap;
+	gap: 10px;
+	padding-top: 100px;
+	padding-bottom: 200px;
+}
+
+.projects .projectstitle {
+	text-align: center;
+	font-size: xx-large;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+	padding-bottom: 80px;
+	transition: .01s ease-in-out, 0.6s ease-in-out;
+	
+}
+
+.projects .projectstitle:hover {
+font-size: xxx-large;
+}
+
+.projects .projectimages {
+	width: 100%;
+	margin: auto;
+	text-align: center;
+	display: inline-block;
+}
+
+#projectimg {
+	opacity: 60%;
+	border-radius: 10%;
+	width: 250px;
+	transition: .01s ease-in-out, 0.6s ease-in-out;
+	margin-right: 50px;
+}
+
+#projectimg:hover {
+	opacity: 90%;
+	width: 300px;
+}
+
+.goals-container {
+	margin: auto;
+	width: 700px;
+	color: #e3e3e3;
+	border-radius: 10px;
+	padding: 50px 120px;
+	margin-bottom: 20px; 
+	padding-top: 100px;
+	text-align: center;
+}
+
+.goals-container .goalstexttitle{
+	font-size: xx-large;
+	transition: .01s ease-in-out, 0.6s ease-in-out;
+}
+
+.goals-container .goalstexttitle:hover {
+	font-size: xxx-large;
+}
+
+.goals-container .goalquote {
+	font-size: medium;
+	transition: color .01s ease-in-out, box-shadow 0.6s ease-in-out;
+}
+
+.goals-container .goalquote:hover {
+	box-shadow: inset 1000px 0 0 0 yellow;
+	opacity: 50%;
+	color: black;
+}
+
+.goals-image {
+	width: 100%;
+	margin: auto;
+	padding-bottom: 30px;
+	text-align: center;
+}
+
+#uareloved {
+	opacity: 60%;
+	border-radius: 40%;
+	width: 150px;
+	transition: .01s ease-in-out, 0.6s ease-in-out;
+}
+
+#uareloved:hover {
+	opacity: 90%;
+	width: 200px;
+
+}
+
+.goals-container .goals-text {
+	font-size: small;
+}
+
+.goals-container .goalsimage {
+	width: 100%;
+	padding-top: 60px;
+	text-align: center;
+	display: inline-block;
+}
+
+#goalsimg {
+	opacity: 60%;
+	border-radius: 10%;
+	width: 150px;
+	transition: .01s ease-in-out, 0.6s ease-in-out;
+	margin-right: 50px;
+}
+
+#goalsimg:hover {
+	opacity: 90%;
+	width: 230px;
+}
+
+
+h3 {
+	display: inline-block;
+	text-align: center;
+	margin: 0;
+}
+
+.contactinfo {
+	color: #e3e3e3;
+	border-radius: 10px;
+	padding: 50px 120px;
+	text-align: center;
+}
+
+.contactinfotitle {
+	font-size: xx-large;
+	margin-bottom: 50px;
+	transition: .01s ease-in-out, 0.6s ease-in-out;
+}
+
+.contactinfotitle:hover {
+	font-size: xxx-large;
+	transition: all 1s ease;
+}
+
+input[type=text], select, textarea {
+	width: 100%;
+	padding: 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	margin-top: 6px;
+	margin-bottom: 16px;
+	resize: vertical;
+  }
+  
+input[type=submit] {
+	background-color: #828282;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+  }
+  
+input[type=submit]:hover {
+	background-color: #bfc43a;
+  }
+  
+.contactbox {
+	border-radius: 5px;
+	padding: 20px;
+	margin-bottom: 50px;
+	box-sizing: border-box;
+	width: 500px;
+	margin: auto;
+	font-size: small;
+  }
+
+#fname, #lname {
+	height: 30px;
+  }
+
+.contacttable {
+	font-size: 10px;
+	font-style: oblique;
+	text-align: center;
+	padding-top: 10px;
+}
+
+.contacttable table {
+	margin: auto;
+}
+
+td {
+	text-align: center;
+}
+
+.clear-right {
+	clear: right;
+}
+
+.hr {
+	width: 70%;
+	margin: auto;
+}
+
+.clear-bottom {
+	clear:bottom;
+}
+
+footer h6 {
+	text-align: center;
+    color: white;
+	background-color:#343a40;
+	opacity: 50%;
+}
+
+@media screen and (max-width: 480px) {
+	.nav-tabs {
+		margin-top: 10px;
+		width: 100vw;	
+	}
+
+	.hometext {
+		padding-top: 70px;
+		margin-bottom: 70px;
+	}
+
+	.hometext .home {
+		font-size: 50px;
+		text-align: center;
+	}
+
+	.hometext .home2 {
+		font-size: 25px;
+		text-align: center;
+	}
+
+	.projects {
+		padding: 0;
+	}
+
+	.projects .projectimages { 
+		width: 100vw;
+		display: flex;
+		justify-content: center;
+		flex-flow: column nowrap;
+		align-content: center;
+		margin: 0;
+		flex-flow: row wrap;
+	}
+
+	#projectimg {
+		margin: 0;
+		margin-bottom: 10px;
+	}
+
+	.goals-container {
+		width: 90vw;
+		padding: 50px 0;
+		margin: auto;
+	}
+
+	.goals-container .goalstexttitle{
+		padding-bottom: 10px;
+	}
+
+	.goals-container .goals-text {
+		width: 20vw;
+		text-align: center;
+	}
+
+	.goalsimage {
+		margin-left: 30px;
+		gap: 30px;
+	}	
+
+	.contactinfo {
+		text-align: center;
+		margin: auto;
+		padding: 0;
+	}
+
+	.contactinfotitle {
+		font-size: 20px;
+		padding-top: 15px;
+	}
+
+	.contactbox {
+		width: 250px;
+		margin: 0 auto;
+	}
+
+	.socialmedia {
+		margin-top: 20px;
+		margin-bottom: 10px;
+	}
+
+	.contacttable {
+		font-size: 10px;
+		font-style: oblique;
+		text-align: center;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	
+	.hr {
+		margin: auto;
+	}
+	
+}
+
+@media screen and (min-width: 767px) and (max-width: 1025px) {
+	.nav-tabs {
+		margin-top: 20px;
+		width: 100vw;	
+	}
+
+	.hometext {
+		padding-top: 70px;
+		margin-bottom: 70px;
+		text-align: center;
+		margin: auto;
+	}
+
+	.hometext .home {
+		font-size: 120px;
+	}
+
+	.hometext .home2 {
+		font-size: 70px;
+		margin-bottom: 30px;
+
+	}
+
+	.projects {
+		padding: 0;
+	}
+
+	.projects .projectstitle {
+		font-size: xxx-large;
+	}
+
+	.projects .projectimages { 
+		width: 100vw;
+		display: flex;
+		justify-content: center;
+		flex-flow: column wrap;
+		align-content: center;
+		margin: 0;
+	}
+
+	#projectimg {
+		margin: 0;
+		margin-bottom: 30px;
+		width: 75%;
+	}
+
+	.goals-container .goalstexttitle{
+		font-size: xxx-large;
+	}
+
+	.goals-container {
+		width: 90vw;
+		padding: 70px 0;
+		margin: auto;
+	}
+
+	#uareloved {
+		margin-bottom: 30px;
+		width: 40%;
+	}
+
+	.goals-container .goals-text {
+		width: 20vw;
+		text-align: center;
+	}
+
+	#goalsimg {
+		width: 75%;
+		margin: auto;
+		margin-bottom: 10px;
+	}
+
+	.contactinfo {
+		text-align: center;
+		margin: auto;
+		padding: 0;
+	}
+
+	.contactinfotitle {
+		font-size: 20px;
+		padding-top: 15px;
+	}
+
+	.contactbox {
+		width: 250px;
+		margin: 0 auto;
+	}
+
+	.socialmedia {
+		margin-top: 20px;
+		margin-bottom: 10px;
+	}
+
+	.contacttable {
+		font-size: 10px;
+		font-style: oblique;
+		text-align: center;
+		padding-top: 10px;
+		padding-bottom: 50px;
+	}
+	
+	.hr {
+		margin: auto;
+	}
+}
