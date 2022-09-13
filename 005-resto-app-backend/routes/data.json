@@ -1,0 +1,40 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Krabby Patty",
+      "category": "Food",
+      "price": "1.25",
+      "image": "https://cdn-icons-png.flaticon.com/512/198/198416.png"
+    },
+    {
+      "id": 2,
+      "name": "Kelp Shake",
+      "category": "Drink",
+      "price": "2",
+      "image": "https://cdn-icons-png.flaticon.com/512/4931/4931276.png"
+    },
+    {
+      "id": 3,
+      "name": "Krusty Krab Pizza",
+      "category": "Food",
+      "price": "3",
+      "image": "https://cdn-icons-png.flaticon.com/512/3132/3132693.png"
+    },
+    {
+      "id": 4,
+      "name": "Krabby Fries",
+      "category": "Food",
+      "price": "1.95",
+      "image": "https://cdn-icons-png.flaticon.com/512/123/123300.png"
+    },
+    {
+      "id": 5,
+      "name": "Seafoam Soda",
+      "category": "Drink",
+      "price": "1",
+      "image": "https://cdn-icons-png.flaticon.com/512/1349/1349838.png"
+    }
+  ],
+  "cart": []
+}
