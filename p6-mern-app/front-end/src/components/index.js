@@ -1,0 +1,11 @@
+export { default as HomePage } from "./pages/HomePage";
+export { default as BooksPage } from "./pages/BooksPage";
+export { default as RecomBooks } from "./pages/RecomBooksPage";
+export { default as SignUpPage } from "./pages/SignUpPage";
+export { default as LogInPage } from "./pages/LogInPage";
+export { default as Book } from "./pages/Book";
+// export { default as BookReviews } from "./pages/BookReviews";
+export { default as CommentsPage } from "./pages/CommentsPage";
+export { default as Nav } from "./nav/Nav";
+export { default as ErrorPage } from "./pages/ErrorPage";
+export { default as HomeBooks } from "./pages/HomeBooks";

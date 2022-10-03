@@ -1,0 +1,47 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 10px;
+  border-color: black;
+  justify-content: space-between;
+  padding: 0px 20px;
+}
+
+.firstHeader {
+  display: flex;
+  flex-flow: row no-wrap;
+}
+
+.headerOpts {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 50px;
+  min-width: 400px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.startButtons {
+  display: flex;
+}
+
+.login {
+  display: flex;
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.signUp {
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+}
