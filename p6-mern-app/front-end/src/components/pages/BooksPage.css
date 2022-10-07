@@ -1,0 +1,21 @@
+.categories {
+  display: flex;
+  flex-flow: row wrap;
+  margin: auto;
+  max-width: 500px;
+  background-color: brown;
+  padding: 20px;
+  justify-content: space-between;
+}
+
+.bookCategory {
+  min-width: 100px;
+  padding: 5px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.titlePage {
+  text-align: center;
+  text-decoration: underline;
+}

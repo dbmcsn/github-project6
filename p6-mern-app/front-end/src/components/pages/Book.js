@@ -1,25 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import "./Book.css";
 
-const Book = ({ imgURL, imgAlt, title, author, summary, id }) => {
-  console.log(imgURL);
+const Book = ({ imgURL, imgAlt, title, author, summary, id, layout }) => {
+  //   console.log(imgURL);
+
+  const [seeMore, setSeeMore] = useState(false);
+
   return (
     <>
-      <div>
-        <div>
+      <div className={layout}>
+        <div className="img">
           <Link to={`/book/${id}`}>
             <img src={imgURL} alt={imgAlt} />
           </Link>
         </div>
-        <div className="bookDetails">
+        <div className="bookInfo">
           <div className="title">{title}</div>
           <div className="author">
-            {author.map((a) => {
+            {author?.map((a) => {
               return <p>{a}</p>;
             })}
           </div>
-          <div className="Summary">{summary}</div>
-          <div className="bookButtons">
+          {summary ? (
+            <div className="summary">
+              <p className="shortSummary">
+                {seeMore ? summary : `${summary?.slice(0, 300)}`}
+                {summary?.slice(300) != "" && (
+                  <span
+                    className="seeMore"
+                    onClick={() => setSeeMore(!seeMore)}
+                  >
+                    {seeMore ? "...See Less" : "...See More"}
+                  </span>
+                )}
+              </p>
+              {/* <p className="expandedSummary">
+                {summary}... <span>See Less</span>
+              </p> */}
+            </div>
+          ) : (
+            ""
+          )}
+          <div className="reviewsButton">
             <Link to={`/book/${id}`}>
               <button className="reviews">Reviews</button>
             </Link>

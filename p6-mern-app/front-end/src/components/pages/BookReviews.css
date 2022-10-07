@@ -1,0 +1,44 @@
+.reviewBookDetail {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  max-width: 330px;
+}
+
+.reviewBookInfo {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 10px;
+  font-size: 12px;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+}
+
+.reviewFieldContainer {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 20px auto;
+}
+
+.reviewField {
+  margin-top: 1px;
+}
+
+.reviewTitle {
+  font-size: 25px;
+  font-style: italic;
+  text-align: center;
+}
+
+.reviewAuthor {
+  font-size: 13px;
+}
+
+.bookReviewTitle {
+  text-align: center;
+  text-decoration: underline;
+}

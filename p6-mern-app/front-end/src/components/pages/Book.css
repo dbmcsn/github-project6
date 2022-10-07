@@ -1,0 +1,80 @@
+.bookDetails {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+  margin: auto;
+  max-width: 500px;
+}
+
+.bookDetails.left .img {
+  order: 2;
+}
+
+.bookDetails.left .bookInfo {
+  order: 1;
+}
+
+.bookDetails .img {
+  order: 1;
+}
+
+.bookDetails .bookInfo {
+  order: 2;
+}
+
+.bookInfo {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding: 10px;
+  font-size: 12px;
+  width: 300px;
+  justify-content: center;
+  align-content: center;
+}
+
+.reviewsButton {
+  margin-top: 10px;
+}
+
+.summary .expandedSummary {
+  display: none;
+}
+
+.summary.expanded .expandedSummary {
+  display: block;
+}
+
+.summary.expanded .shortSummary {
+  display: none;
+}
+
+.summary .shortSummary {
+  display: block;
+}
+
+.summary p > span {
+  cursor: pointer;
+  color: blue;
+}
+
+.summary p > span:hover {
+  color: aquamarine;
+}
+
+.title {
+  font-size: 17px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/*
+.author {
+  text-align: center;
+}
+
+.summary {
+  text-align: center;
+  font-style: italic;
+} */
