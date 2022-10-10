@@ -16,8 +16,6 @@ const SignUpPage = () => {
   const navigate = useNavigate();
 
   const handleSignUp = () => {
-    console.log(password);
-    console.log(repeatPassword);
     if (password === repeatPassword) {
       axios
         .post("http://localhost:8888/api/users/signup", {
@@ -45,8 +43,8 @@ const SignUpPage = () => {
   return (
     <>
       <Nav />
-      <div>
-        <h1>Sign Up Page</h1>
+      <div className="signupform">
+        <h1>Sign Up Here:</h1>
 
         <p>Please fill in this form to create an account.</p>
 

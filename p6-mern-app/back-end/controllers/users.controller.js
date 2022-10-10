@@ -8,7 +8,6 @@ const getUsers = (req, res) => {
     .find({ bookId: req.params.id })
     .sort({ timestamp: -1 })
     .then((data) => {
-      // console.log(data);
       res.send({ success: true, reviews: data });
     });
 };
@@ -36,7 +35,6 @@ const usersSignup = (req, res) => {
   } else {
     usersModel.findOne({ username: username }).then((data) => {
       if (data) {
-        // console.log(data);
         res.send({ success: false, message: "Username already exists." });
       } else {
         usersModel.findOne({ email: email }).then(async (data) => {

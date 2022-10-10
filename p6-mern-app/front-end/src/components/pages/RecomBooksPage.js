@@ -17,7 +17,6 @@ const RecomBooksPage = () => {
         `https://www.googleapis.com/books/v1/volumes?q=${categories[catIndex]}`
       )
       .then(function (response) {
-        console.log(response);
         setBookCollection(response.data.items);
       })
       .catch(function (error) {});

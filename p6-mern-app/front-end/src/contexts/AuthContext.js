@@ -19,13 +19,11 @@ export const AuthProvider = ({ children }) => {
           token: token,
         })
         .then((res) => {
-          console.log(res.data.success);
           if (!res.data.success) {
             setToken(null);
             setLogUser(null);
           } else {
             setLogUser(res.data.userInfo);
-            console.log(res.data);
           }
           setLoading(false);
         });

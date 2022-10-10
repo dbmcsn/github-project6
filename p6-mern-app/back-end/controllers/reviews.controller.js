@@ -7,7 +7,6 @@ const getReviews = (req, res) => {
     .find({ bookId: req.params.id })
     .sort({ timestamp: -1 })
     .then((data) => {
-      // console.log(data);
       res.send({ success: true, reviews: data });
     });
 };

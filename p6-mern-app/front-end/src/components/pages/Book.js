@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import "./Book.css";
 
 const Book = ({ imgURL, imgAlt, title, author, summary, id, layout }) => {
-  //   console.log(imgURL);
-
   const [seeMore, setSeeMore] = useState(false);
 
   return (
@@ -35,9 +33,6 @@ const Book = ({ imgURL, imgAlt, title, author, summary, id, layout }) => {
                   </span>
                 )}
               </p>
-              {/* <p className="expandedSummary">
-                {summary}... <span>See Less</span>
-              </p> */}
             </div>
           ) : (
             ""

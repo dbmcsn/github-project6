@@ -9,7 +9,6 @@ const LogInPage = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const { setToken, setLogUser, logUser } = useAuth();
-  // console.log(logUser);
 
   const navigate = useNavigate();
 
@@ -25,7 +24,6 @@ const LogInPage = () => {
           navigate("/");
           setToken(res.data.token);
           setLogUser(res.data.userInfo);
-          // console.log(res.data.userInfo);
         } else {
           alert(res.data.message);
         }
@@ -36,8 +34,8 @@ const LogInPage = () => {
     <>
       <Nav />
       <div>
-        <h1>LogInPage</h1>
-        <div className="logInForm">
+        <h1>Log In Here:</h1>
+        <div className="loginform">
           <label for="username">
             <b>Username: </b>
           </label>

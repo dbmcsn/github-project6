@@ -6,7 +6,6 @@ import { useAuth } from "../../contexts/AuthContext";
 
 const Nav = () => {
   const { token, logUser } = useAuth();
-  //   console.log(logUser);
 
   return (
     <div className="header">
@@ -45,7 +44,7 @@ const Nav = () => {
             <span>Hello there, {logUser.name}! </span>
 
             <NavLink to="/logout">
-              <button className="logOut">Log Out</button>
+              <button className="logOut"> Log Out</button>
             </NavLink>
           </div>
         </div>
