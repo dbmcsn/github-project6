@@ -8,9 +8,6 @@ const verifyToken = (req, res, next) => {
         res.send({ success: false, message: "Invalid token." });
       }
       req.userInfo = payload;
-      console.log(payload);
-      console.log(token);
-      console.log("---");
       next();
     });
   } else {

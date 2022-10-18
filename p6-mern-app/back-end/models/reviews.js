@@ -12,6 +12,7 @@ const reviewsSchema = new Schema({
       username: String,
       name: String,
       comment: String,
+      timestamp: Date,
     },
   ],
 });

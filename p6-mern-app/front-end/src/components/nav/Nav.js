@@ -1,11 +1,17 @@
-import React from "react";
-import "./nav.css";
-import logo from "../../assets/logo.PNG";
-import { NavLink } from "react-router-dom";
+import React, { useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContext";
+import "./nav.css";
+import logo from "../../assets/logo.png";
 
 const Nav = () => {
   const { token, logUser } = useAuth();
+  const [searchItems, setSearchItems] = useState();
+  const navigate = useNavigate();
+
+  const handleSearch = () => {
+    navigate(`/search/${searchItems}`);
+  };
 
   return (
     <div className="header">
@@ -26,8 +32,8 @@ const Nav = () => {
           </div>
         </div>
       ) : (
-        <div>
-          <div className="firstHeader">
+        <div className="secondContainer">
+          <div className="secondHeader">
             <div className="logoImg">
               <NavLink to="/">
                 <img src={logo} alt="The Book" className="logo" /> {""}
@@ -39,13 +45,29 @@ const Nav = () => {
               <NavLink to="/books">Books</NavLink>
               <NavLink to="/recommended-books">Recommended Books</NavLink>
             </div>
-
-            {/* <div className="searchBar">search bar</div> */}
-            <span>Hello there, {logUser.name}! </span>
-
-            <NavLink to="/logout">
-              <button className="logOut"> Log Out</button>
-            </NavLink>
+          </div>
+          <div className="right">
+            <div>
+              <input
+                type="text"
+                placeholder="Search.."
+                className="searchBar"
+                value={searchItems}
+                onChange={(e) => setSearchItems(e.target.value)}
+              />
+              <input
+                type="submit"
+                value="Search"
+                className="searchButton"
+                onClick={handleSearch}
+              />
+            </div>
+            <div>
+              <span>Hello there, {logUser.name}! </span>
+              <NavLink to="/logout">
+                <button className="logOut"> Log Out</button>
+              </NavLink>
+            </div>
           </div>
         </div>
       )}

@@ -1,35 +1,46 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Nav } from "../../components";
-import "./RecomBooksPage.css";
-import "./HomeBooks.css";
 import axios from "axios";
+import "./BooksPage.css";
 import Book from "./Book";
+import { useParams } from "react-router-dom";
 
-const RecomBooksPage = () => {
+const SearchPage = () => {
+  const { searchStr } = useParams();
   const [bookCollection, setBookCollection] = useState([]);
+  const [readCategory, setReadCategory] = useState("");
 
   useEffect(() => {
-    let categoryid = "";
     axios
-      .get("http://localhost:8888/api/categories/recommended-books")
+      .post("http://localhost:8888/api/categories/search", {
+        search: searchStr,
+      })
       .then((res) => {
-        const data = res.data.data;
-        setBookCollection(data);
+        if (res.data.success) {
+          setBookCollection(res.data.books);
+        }
       });
   }, []);
+
+  if (!bookCollection) {
+    <h1>none</h1>;
+  }
 
   return (
     <>
       <Nav />
       <div className="body">
-        <div className="recomTitle">Recommended Books</div>
+        <div className="titlePage">
+          <h1>Books</h1>
+        </div>
         <div className="quote">
           <h2>
-            "If you don’t like to read, you haven’t found the right book."
+            "Good friends, good books, and a sleepy conscience: this is the
+            ideal life."
           </h2>
         </div>
 
-        {bookCollection.length > 0 && (
+        {bookCollection?.length > 0 && (
           <div className="homeBooks">
             {bookCollection.map((book, index) => {
               const layout =
@@ -46,7 +57,6 @@ const RecomBooksPage = () => {
                 />
               );
             })}
-            ;
           </div>
         )}
       </div>
@@ -54,4 +64,4 @@ const RecomBooksPage = () => {
   );
 };
 
-export default RecomBooksPage;
+export default SearchPage;

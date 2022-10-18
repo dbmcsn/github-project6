@@ -12,8 +12,7 @@ import {
   LogOut,
   SignUpPage,
   BookReviews,
-  ErrorPage,
-  // CommentsPage,
+  SearchPage,
 } from "./components";
 
 const App = () => {
@@ -24,7 +23,6 @@ const App = () => {
           <Route path="/" element={<PrivateRoute />}>
             <Route index element={<HomePage />} />
             <Route path="book/:id" element={<BookReviews />} />
-            {/* <Route path="/book/:id/comments" element={<CommentsPage />} /> */}
             <Route path="books" element={<BooksPage />} />
             <Route path="recommended-books" element={<RecomBooksPage />} />
           </Route>
@@ -34,7 +32,7 @@ const App = () => {
 
           <Route path="/signup" element={<SignUpPage />} />
 
-          {/* <Route path="*" element={<ErrorPage />} /> */}
+          <Route path="/search/:searchStr" element={<SearchPage />} />
         </Routes>
       </AuthProvider>
     </div>

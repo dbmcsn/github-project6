@@ -85,8 +85,6 @@ const usersLogIn = (req, res) => {
             username: username,
             name: data.name,
           };
-          console.log(userPayload);
-          console.log("///");
           const usersToken = jwt.sign(userPayload, "userToken");
           res.send({
             success: true,

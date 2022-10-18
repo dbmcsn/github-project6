@@ -56,15 +56,19 @@
 
 .summary p > span {
   cursor: pointer;
-  color: blue;
+  color: #cc4124;
 }
 
 .summary p > span:hover {
-  color: aquamarine;
+  color: #6e694a;
 }
 
 .title {
-  font-size: 17px;
+  font-size: 20px;
   font-weight: bold;
   text-align: center;
+}
+
+.perbook {
+  margin-bottom: 30px;
 }

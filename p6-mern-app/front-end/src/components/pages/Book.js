@@ -6,7 +6,7 @@ const Book = ({ imgURL, imgAlt, title, author, summary, id, layout }) => {
   const [seeMore, setSeeMore] = useState(false);
 
   return (
-    <>
+    <div className="perbook">
       <div className={layout}>
         <div className="img">
           <Link to={`/book/${id}`}>
@@ -15,11 +15,7 @@ const Book = ({ imgURL, imgAlt, title, author, summary, id, layout }) => {
         </div>
         <div className="bookInfo">
           <div className="title">{title}</div>
-          <div className="author">
-            {author?.map((a) => {
-              return <p>{a}</p>;
-            })}
-          </div>
+          <div className="author">{author}</div>
           {summary ? (
             <div className="summary">
               <p className="shortSummary">
@@ -44,7 +40,7 @@ const Book = ({ imgURL, imgAlt, title, author, summary, id, layout }) => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

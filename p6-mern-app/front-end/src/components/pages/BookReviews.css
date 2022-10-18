@@ -42,3 +42,66 @@
   text-align: center;
   text-decoration: underline;
 }
+
+.commentsButton {
+  border-radius: 5px;
+  margin-left: 94px;
+}
+
+.commentsContainer {
+  margin-left: 25px;
+  margin-right: 80px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: rgba(65, 65, 65, 0.4);
+  border-radius: 5px;
+}
+
+.commTitle {
+  margin-top: 1px;
+  margin-bottom: 7px;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.revTime {
+  margin-top: 10px;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.reviewName {
+  margin-top: 0px;
+  font-size: 15px;
+  margin-bottom: 7px;
+  font-weight: bold;
+}
+
+.textReview {
+  font-size: 13x;
+  margin-bottom: 10px;
+  width: 300px;
+  word-wrap: break-word;
+}
+
+.commtime {
+  font-size: 12px;
+  font-style: italic;
+}
+
+.commName {
+  font-size: 13px;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+.displayComment {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.commentText {
+  height: 30px;
+}

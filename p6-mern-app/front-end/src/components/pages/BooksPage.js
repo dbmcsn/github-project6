@@ -6,35 +6,38 @@ import Book from "./Book";
 
 const BooksPage = () => {
   const [bookCollection, setBookCollection] = useState([]);
-  const [categories, setCategories] = useState([
-    "Art",
-    "Computers",
-    "Cooking",
-    "Drama",
-    "History",
-    "Psychology",
-    "Science",
-    "Travel",
-  ]);
+  const [categories, setCategories] = useState(["Art", "History", "Travel"]);
+  const [readCategory, setReadCategory] = useState("");
 
   useEffect(() => {
-    const catIndex = Math.floor(Math.random() * categories.length);
+    let categoryid = "";
     axios
-      .get(
-        `https://www.googleapis.com/books/v1/volumes?q=${categories[catIndex]}`
-      )
-      .then(function (response) {
-        console.log(response);
-        setBookCollection(response.data.items);
+      .get(`http://localhost:8888/api/categories/`)
+      .then((res) => {
+        if (res.data.success) {
+          setCategories(res.data.categories);
+          const catIndex = Math.floor(
+            Math.random() * res.data.categories.length
+          );
+          categoryid = res.data.categories[catIndex]._id;
+          setReadCategory(categoryid);
+        }
       })
-      .catch(function (error) {});
+      .finally(() => {
+        axios
+          .get(`http://localhost:8888/api/categories/${categoryid}`)
+          .then(function (response) {
+            setBookCollection(response.data.books);
+          })
+          .catch(function (error) {});
+      });
   }, []);
 
   const loadBooksByCategory = (category) => {
     axios
-      .get(`https://www.googleapis.com/books/v1/volumes?q=${category}`)
+      .get(`http://localhost:8888/api/categories/${category}`)
       .then(function (response) {
-        setBookCollection(response.data.items);
+        setBookCollection(response.data.books);
       })
       .catch(function (error) {});
   };
@@ -54,14 +57,14 @@ const BooksPage = () => {
             return (
               <button
                 className="bookCategory"
-                onClick={() => loadBooksByCategory(category)}
+                onClick={() => loadBooksByCategory(category._id)}
               >
-                {category}
+                {category.categoryName}
               </button>
             );
           })}
         </div>
-        {bookCollection.length > 0 && (
+        {bookCollection?.length > 0 && (
           <div className="homeBooks">
             {bookCollection.map((book, index) => {
               const layout =
@@ -69,12 +72,12 @@ const BooksPage = () => {
               return (
                 <Book
                   layout={layout}
-                  imgURL={book?.volumeInfo?.imageLinks?.thumbnail}
-                  imgAlt={book?.volumeInfo?.title}
-                  title={book?.volumeInfo?.title}
-                  author={book?.volumeInfo?.authors}
-                  summary={book?.volumeInfo?.description}
-                  id={book.id}
+                  imgURL={book.imagePath}
+                  imgAlt={book.title}
+                  title={book.title}
+                  author={book.author}
+                  summary={book.summary}
+                  id={book.bookId}
                 />
               );
             })}
