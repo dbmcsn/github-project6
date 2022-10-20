@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContext";
 import "./nav.css";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logo.PNG";
 
 const Nav = () => {
   const { token, logUser } = useAuth();
